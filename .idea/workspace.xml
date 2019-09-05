@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8b874c5-86bc-4bb3-9a31-73a5fae76c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CTCI_6th_ed_solutions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es6/4_2/solution.js" beforeDir="false" afterPath="$PROJECT_DIR$/es6/4_2/minimalTree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es6/4_2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/es6/4_2/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/es6/4_2/minimalTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/es6/4_2/minimalTree.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567641040798</updated>
-      <workItem from="1567641042079" duration="880000" />
+      <workItem from="1567641042079" duration="1246000" />
     </task>
     <servers />
   </component>

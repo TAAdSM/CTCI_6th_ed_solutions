@@ -1,5 +1,4 @@
 // This tree class is just for show and not used in the solution.
-
 class Tree {
     root;
 
@@ -57,3 +56,6 @@ class BinarySearchTreeNode {
         }
     }
 }
+
+let bst = new BinarySearchTree(new BinarySearchTreeNode(10));
+console.log(bst);
