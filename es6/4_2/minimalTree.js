@@ -38,6 +38,8 @@ class BinarySearchTreeNode {
         this.parent = parent;
     }
 
+    // current assumption: duplicate values will never
+    // be inserted into the tree
     insertHelper(nodeToInsert) {
         if (nodeToInsert.value > this.value) {
             if (this.right == null) {
@@ -58,4 +60,16 @@ class BinarySearchTreeNode {
 }
 
 let bst = new BinarySearchTree(new BinarySearchTreeNode(10));
+console.log(bst);
+
+console.log(`Inserting a node into bst with value ${5}`);
+bst.insert(new BinarySearchTreeNode(5));
+console.log(bst);
+
+console.log(`Inserting a node into bst with value ${7}`);
+bst.insert(new BinarySearchTreeNode(7));
+console.log(bst);
+
+console.log(`Inserting a node into bst with value ${1}`);
+bst.insert(new BinarySearchTreeNode(1));
 console.log(bst);
