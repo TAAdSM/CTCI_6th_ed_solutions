@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8b874c5-86bc-4bb3-9a31-73a5fae76c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/es6/1_1/doesStringContainUniqueChars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/es6/1_1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/es6/1_2/checkIfStringsArePermutation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/es6/1_2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/es6/libraries/lodash.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/es6/4_2/minimalTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/es6/4_2/minimalTree.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CTCI_6th_ed_solutions/es6/1_2/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -62,7 +72,7 @@
       <workItem from="1567641042079" duration="9532000" />
       <workItem from="1567949149624" duration="151000" />
       <workItem from="1568050583147" duration="344000" />
-      <workItem from="1568147224704" duration="2060000" />
+      <workItem from="1568147224704" duration="3229000" />
     </task>
     <servers />
   </component>
