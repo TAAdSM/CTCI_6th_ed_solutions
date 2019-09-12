@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8b874c5-86bc-4bb3-9a31-73a5fae76c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/es6/1_4/findIfCanBePermutedToPalindrome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/es6/1_4/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,7 +70,7 @@
       <workItem from="1567949149624" duration="151000" />
       <workItem from="1568050583147" duration="344000" />
       <workItem from="1568147224704" duration="4601000" />
-      <workItem from="1568234652080" duration="970000" />
+      <workItem from="1568234652080" duration="1549000" />
     </task>
     <servers />
   </component>
