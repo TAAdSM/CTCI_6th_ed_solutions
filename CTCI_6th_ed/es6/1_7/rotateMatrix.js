@@ -37,20 +37,24 @@ function findNextCoordinateInOrbitNEqualsTwoHardCodedCase(i, j) {
 
 // Assumption: i,j are 1-based indices, n is the side length
 // of the square matrix
+// function findNextCoordinateInOrbit(i, j, n) {
+//     if (i > n || j > n) {
+//         return -1;
+//     }
+//
+//     if (n < 2) {
+//         return {iCoord: i, jCoord: j};
+//     }
+//
+//     if (n === 2) {
+//         return findNextCoordinateInOrbitNEqualsTwoHardCodedCase(i, j);
+//     }
+//
+//     return findNextCoordinateInOrbitNGreaterThanTwo(n, i, j);
+// }
+
 function findNextCoordinateInOrbit(i, j, n) {
-    if (i > n || j > n) {
-        return -1;
-    }
-
-    if (n < 2) {
-        return {iCoord: i, jCoord: j};
-    }
-
-    if (n === 2) {
-        return findNextCoordinateInOrbitNEqualsTwoHardCodedCase(i, j);
-    }
-
-    return findNextCoordinateInOrbitNGreaterThanTwo(n, i, j);
+    return  n===0 ? -1 : {iCoord: j, jCoord: n - i + 1};
 }
 
 console.log('n === 0 test');
