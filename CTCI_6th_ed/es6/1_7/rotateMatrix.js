@@ -3,28 +3,7 @@ function coordinateIsInMiddleCross(i, j, n) {
     return i === s + 1 || j === s + 1;
 }
 
-// Assumption: i,j are 1-based indices, n is the side length
-// of the square matrix
-function findNextCoordinateInOrbit(i, j, n) {
-    if (i > n || j > n) {
-        return -1;
-    }
-
-    if (n < 2) {
-        return {iCoord: i, jCoord: j};
-    }
-
-    if (n === 2) {
-        if (i === 1 && j === 1) {
-            return {iCoord: i, jCoord: j + 1};
-        } else if (i === 1 && j === 2) {
-            return {iCoord: i + 1, jCoord: j};
-        } else if (i === 2 && j === 2) {
-            return {iCoord: i, jCoord: j - 1};
-        }
-        return {iCoord: i - 1, jCoord: j};
-    }
-
+function findNextCoordinateInOrbitNGreaterThanTwo(n, i, j) {
     if (n % 2 === 1 && coordinateIsInMiddleCross(i, j, n)) {
         let s = Math.floor(n / 2);
         if (i !== s + 1 && j === s + 1) {
@@ -43,7 +22,35 @@ function findNextCoordinateInOrbit(i, j, n) {
         return {iCoord: i - (vertInterDistance + 1), jCoord: j};
     }
     return {iCoord: i + (vertInterDistance + 1), jCoord: j};
+}
 
+function findNextCoordinateInOrbitNEqualsTwoHardCodedCase(i, j) {
+    if (i === 1 && j === 1) {
+        return {iCoord: i, jCoord: j + 1};
+    } else if (i === 1 && j === 2) {
+        return {iCoord: i + 1, jCoord: j};
+    } else if (i === 2 && j === 2) {
+        return {iCoord: i, jCoord: j - 1};
+    }
+    return {iCoord: i - 1, jCoord: j};
+}
+
+// Assumption: i,j are 1-based indices, n is the side length
+// of the square matrix
+function findNextCoordinateInOrbit(i, j, n) {
+    if (i > n || j > n) {
+        return -1;
+    }
+
+    if (n < 2) {
+        return {iCoord: i, jCoord: j};
+    }
+
+    if (n === 2) {
+        return findNextCoordinateInOrbitNEqualsTwoHardCodedCase(i, j);
+    }
+
+    return findNextCoordinateInOrbitNGreaterThanTwo(n, i, j);
 }
 
 console.log('n === 0 test');
@@ -111,18 +118,18 @@ console.log(_.isEqual(findNextCoordinateInOrbit(2, 1, 3), {
 }) === true);
 
 function performFourWayInPlaceSwap(rowIndex, colIndex, n, arr) {
-    let nextElementInOrbit = findNextCoordinateInOrbit(rowIndex, colIndex, n);
-    let secondElementInOrbit = findNextCoordinateInOrbit(nextElementInOrbit.iCoord, nextElementInOrbit.jCoord, n);
-    let thirdElementInOrbit = findNextCoordinateInOrbit(secondElementInOrbit.iCoord, secondElementInOrbit.jCoord, n);
+    let nextElementInOrbit = findNextCoordinateInOrbit(rowIndex+1, colIndex+1, n);
+    let secondElementInOrbit = findNextCoordinateInOrbit(nextElementInOrbit.iCoord - 1, nextElementInOrbit.jCoord - 1, n);
+    let thirdElementInOrbit = findNextCoordinateInOrbit(secondElementInOrbit.iCoord - 1, secondElementInOrbit.jCoord - 1, n);
 
-    let temp1 = arr[nextElementInOrbit.iCoord][nextElementInOrbit.jCoord];
-    arr[nextElementInOrbit.iCoord][nextElementInOrbit.jCoord] = arr[rowIndex][colIndex];
+    let temp1 = arr[nextElementInOrbit.iCoord - 1][nextElementInOrbit.jCoord - 1];
+    arr[nextElementInOrbit.iCoord - 1][nextElementInOrbit.jCoord - 1] = arr[rowIndex][colIndex];
 
-    let temp2 = arr[secondElementInOrbit.iCoord][secondElementInOrbit.jCoord];
-    arr[secondElementInOrbit.iCoord][secondElementInOrbit.jCoord] = temp1;
+    let temp2 = arr[secondElementInOrbit.iCoord - 1][secondElementInOrbit.jCoord - 1];
+    arr[secondElementInOrbit.iCoord - 1][secondElementInOrbit.jCoord - 1] = temp1;
 
-    temp1 = arr[thirdElementInOrbit.iCoord][thirdElementInOrbit.jCoord];
-    arr[thirdElementInOrbit.iCoord][thirdElementInOrbit.jCoord] = temp2;
+    temp1 = arr[thirdElementInOrbit.iCoord - 1][thirdElementInOrbit.jCoord - 1];
+    arr[thirdElementInOrbit.iCoord - 1][thirdElementInOrbit.jCoord - 1] = temp2;
 
     arr[rowIndex][colIndex] = temp1;
 }

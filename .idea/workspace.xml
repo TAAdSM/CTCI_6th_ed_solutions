@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8b874c5-86bc-4bb3-9a31-73a5fae76c67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CTCI_6th_ed/es6/1_7/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CTCI_6th_ed/es6/1_7/rotateMatrix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CTCI_6th_ed/es6/1_7/rotateMatrix.js" beforeDir="false" afterPath="$PROJECT_DIR$/CTCI_6th_ed/es6/1_7/rotateMatrix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +79,7 @@
       <workItem from="1568234652080" duration="1549000" />
       <workItem from="1568304811727" duration="700000" />
       <workItem from="1568667271695" duration="174000" />
-      <workItem from="1568829761207" duration="10237000" />
+      <workItem from="1568829761207" duration="11099000" />
     </task>
     <servers />
   </component>
