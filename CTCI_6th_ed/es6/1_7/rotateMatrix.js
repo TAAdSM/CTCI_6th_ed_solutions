@@ -91,7 +91,7 @@ function rotateMatrix(arr) {
     }
 
     for (let rowIndex = 0; rowIndex < Math.floor(n/2); rowIndex++) {
-        for (let colIndex = rowIndex; colIndex < n - rowIndex; colIndex++) {
+        for (let colIndex = rowIndex; colIndex < n - 1 - rowIndex; colIndex++) {
             performFourWayInPlaceSwap(rowIndex, colIndex, n, arr);
         }
     }
@@ -116,6 +116,11 @@ function testRotateMatrix(arr, expected=[]) {
 }
 
 console.log('Testing rotateMatrix');
-// testRotateMatrix([[1]], [[1]]);
+testRotateMatrix([[1]], [[1]]);
 testRotateMatrix([[1, 2], [3, 4]], [[3, 1], [4, 2]]);
-testRotateMatrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[7, 4, 1], [8, 5, 2], [9, 6, 3]]);
+testRotateMatrix([[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+    [[7, 4, 1], [8, 5, 2], [9, 6, 3]]);
+testRotateMatrix([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]],
+    [[13, 9, 5, 1], [14, 10, 6, 2], [15, 11, 7, 3], [16, 12, 8, 4]]);
+testRotateMatrix([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]],
+    [[21, 16, 11, 6, 1], [22, 17, 12, 7, 2], [23, 18, 13, 8, 3], [24, 19, 14, 9, 4], [25, 20, 15, 10 , 5]]);
